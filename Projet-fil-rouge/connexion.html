@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Hello Dubai</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="Logo2.png">
+        <link href="css/style.css" rel="stylesheet" />
+        <link rel="stylesheet" href="parallaxecss.css">
+        <link rel="stylesheet" href="connexion.php">
+    </head>
+
+    <body id="page-top" class="fond">
+        <!-- Barre de Navigation-->
+
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                
+                <a class="navbar-brand js-scroll-trigger" href="index.html"><img class="logonav" src="Logo2.png" alt="logo"></a>
+                <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="formulevols.html">Formules    vols</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="Hotel.html">Formules    hotels</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="Apropos.html">A Propos</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="Contact.html">Contact</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="connexion.html">Connexion</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+      
+        <!-- En tête-->
+
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">                             
+                <h1 class="masthead-heading text-uppercase mb-0">VOTRE  VOYAGE  COMMENCE    ICI!</h1>
+
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <p class="masthead-subheading font-weight-light mb-0">Un    répertoire  de  bonnes  adresses    à   Dubaï</p>
+            </div>
+        </header>
+
+        <!-- Formulaire-->
+
+        <div class="formulaire">
+            <form action="connexion.php" method="post" class="row g-3">
+              <div class="col-12">
+                  <label for="exampleInputEmail1" class="form-label">Email</label>
+                  <input type="email" class="form-control" name="email">
+                </div>
+      
+                <div class="col-12">
+                  <label for="inputPassword" class="form-label">Mot de passe</label>
+                  <input type="password" class="form-control" name="motdepasse">
+                </div>
+      
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="souvenir">
+                  <label class="form-check-label" for="gridCheck">
+                    Se souvenir de moi ?
+                  </label>
+                </div>
+              </div>
+
+              <p class="inscription">Pas de compte ? <a href="inscription.html">Inscrivez-vous !</a></p>
+              
+              <input type="hidden" id="recaptchaResponse" name="recaptcha-response">
+              
+              <div class="col-12">
+              <input type="submit" value="Envoyer" name="envoyer" class="btn btn-primary">
+              </div>
+            </form>
+          </div>
+      
+          <script src="https://www.google.com/recaptcha/api.js?render=6LePI3EfAAAAACNn41654_4N-7s_m2ZPQ4h-nV0O"></script>
+          <script>
+
+              grecaptcha.ready(function() {
+                grecaptcha.execute('6LePI3EfAAAAACNn41654_4N-7s_m2ZPQ4h-nV0O', {action: 'submit'}).then(function(token) {
+                    // Ajout du chemin d'accès à notre serveur
+                    document.getElementById("recaptchaResponse").value = token
+                });
+              });
+            
+          </script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+crossorigin="anonymous"></script>
+</body>
+</html>
